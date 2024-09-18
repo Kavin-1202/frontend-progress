@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaPowerOff, FaUserCircle, FaBars, FaTimes } from 'react-icons/fa';
 
-const NavBar = ({ onLogout }) => {
+const AccountNavBar = ({ onLogout }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -42,7 +42,7 @@ const NavBar = ({ onLogout }) => {
 
           {/* User Info and Logout */}
           <div className="flex items-center space-x-4">
-            <span className="text-white font-bold hidden lg:block">Hey Employee!</span>
+            <span className="text-white font-bold hidden lg:block">Hey Manager!</span>
             <div className="flex items-center">
               <FaUserCircle className="text-white text-2xl" />
               <FaPowerOff 
@@ -52,13 +52,11 @@ const NavBar = ({ onLogout }) => {
             </div>
           </div>
         </div>
-
         {/* Navigation Links */}
         <div className={`${isOpen ? 'block' : 'hidden'} mt-4`}>
           <div className="bg-gray-700 p-4 rounded-md">
-          <Link to="/employee-dashboard" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-          <Link to="/my-courses" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">My Courses</Link>
-          <Link to="/progress" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">My Progress</Link>
+            <Link to="/manager-dashboard" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+            <Link to="/create-request" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Create Request</Link>
           </div>
         </div>
       </div>
@@ -66,4 +64,4 @@ const NavBar = ({ onLogout }) => {
   );
 };
 
-export default NavBar;
+export default AccountNavBar;

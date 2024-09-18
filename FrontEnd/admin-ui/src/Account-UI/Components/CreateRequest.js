@@ -75,6 +75,13 @@ const CreateRequest = () => {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4 text-center">Create Request</h1>
+      {/* Back Button */}
+      <button
+          onClick={() => navigate(-1)}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Back
+        </button>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"

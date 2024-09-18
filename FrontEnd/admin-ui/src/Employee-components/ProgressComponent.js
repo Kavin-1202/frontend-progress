@@ -45,7 +45,7 @@ const ProgressComponent = () => {
       >
         Back
       </button>
-      <h1 className="text-3xl font-bold mb-6 text-center">Course Progress</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">My Progress</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Bar Chart for individual course progress */}
         <div className="bg-white p-4 rounded shadow">

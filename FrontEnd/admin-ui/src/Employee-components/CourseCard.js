@@ -3,26 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const CourseCard = ({ username, course}) => {
-  // const [courseStatus, setCourseStatus] = useState(null);
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   // Fetch the status of the course for the specific employee
-  //   const fetchCourseStatus = async () => {
-  //     try {
-  //       const storedUsername = localStorage.getItem('username')
-  //       const response = await axios.get(
-  //         `http://localhost:9001/admin/assign/status/${course.coursename}`
-  //       );
-  //       // // Assuming response.data is an array of statuses for each employee
-  //       // const [status] = response.data.filter((item) => item.username === storedUsername);
-  //       // setCourseStatus(status.courseStatus);
-  //     } catch (err) {
-  //       console.error('Error fetching course status', err);
-  //     }
-  //   };
-  //   fetchCourseStatus();
-  // }, []);
 
   const handleStartCourse = async () => {
     try {

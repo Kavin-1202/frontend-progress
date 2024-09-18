@@ -24,33 +24,45 @@ const EmployeeHome = () => {
   return (
     <div className="p-6">
       <EmployeeNavbar />
-      <h1 className="text-3xl font-bold mb-6 text-center">Employee Dashboard</h1>
-
+      {/* <h1 className="text-3xl font-bold mb-6 text-center">Employee Dashboard</h1> */}
       {/* Statistics Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
-        <div className="bg-blue-100 p-4 rounded shadow">
-          <h2 className="text-lg font-semibold">Total Courses Assigned</h2>
-          <p className="text-2xl font-bold">{totalAssigned}</p>
-        </div>
-        <div className="bg-green-100 p-4 rounded shadow">
-          <h2 className="text-lg font-semibold">Total Courses OnGoing</h2>
-          <p className="text-2xl font-bold">{totalStarted}</p>
-        </div>
-        <div className="bg-yellow-100 p-4 rounded shadow">
-          <h2 className="text-lg font-semibold">Total Courses Completed</h2>
-          <p className="text-2xl font-bold">{totalCompleted}</p>
+      <div className="bg-gray-100 p-4 rounded-lg shadow-md space-y-4">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-indigo-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
+              <p className="text-2xl font-bold">{totalAssigned}</p>
+              <p className="text-sm">Total Courses Assigned</p>
+            </div>
+            <div className="bg-green-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
+              <p className="text-2xl font-bold">{totalStarted}</p>
+              <p className="text-sm">Total Courses Ongoing</p>
+            </div>
+            <div className="bg-yellow-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
+              <p className="text-2xl font-bold">{totalCompleted}</p>
+              <p className="text-sm">Total Courses Completed</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* My Learning Card */}
-      <div className="bg-purple-100 p-6 rounded shadow cursor-pointer" onClick={() => navigate('/my-courses')}>
-        
-        <p className="text-2xl font-bold">My Learning</p>
+      <div className="bg-gray-100 p-4 rounded-lg shadow-md space-y-4">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="bg-purple-500 text-white p-4 rounded-lg shadow-md flex justify-center items-center cursor-pointer" onClick={() => navigate('/my-courses')}>
+            <p className="text-2xl font-bold">My Learning</p>
+          </div>
+        </div>
       </div>
-      {/* Button to navigate to progress page */}
-      <div className="bg-blue-100 p-6 rounded shadow cursor-pointer" onClick={() => navigate('/progress')}>
-        <p className="text-2xl font-bold">My Progress</p>
+
+      {/* My Progress Card */}
+      <div className="bg-gray-100 p-4 rounded-lg shadow-md space-y-4">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <div className="bg-blue-500 text-white p-4 rounded-lg shadow-md flex justify-center items-center cursor-pointer" onClick={() => navigate('/progress')}>
+            <p className="text-2xl font-bold">My Progress</p>
+          </div>
+        </div>
       </div>
+
     </div>
   );
 };

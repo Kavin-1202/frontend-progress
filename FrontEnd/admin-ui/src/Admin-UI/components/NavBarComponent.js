@@ -56,9 +56,9 @@ const NavBarComponent = ({ onLogout }) => {
         {/* Navigation Links */}
         <div className={`${isOpen ? 'block' : 'hidden'} mt-4`}>
           <div className="bg-gray-700 p-4 rounded-md">
-            <Link to="/" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">HomePage</Link>
+            <Link to="/admin-dashboard" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
             <Link to="/courses" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Courses</Link>
-            <Link to="/admin-all-progress" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Employee Progress</Link>
+            <Link to="/admin-all-progress" className="block text-white hover:bg-gray-600 px-3 py-2 rounded-md text-sm font-medium">Track Employee Progress</Link>
           </div>
         </div>
       </div>

@@ -40,7 +40,7 @@ const AdminDashboard = () => {
   const handleCreateClick = (requestid) => {
     navigate(`/create-course/${requestid}`);
   };
-
+  
   const numberOfCoursesCreated = new Set(
     requests.map((request) => request.coursename)
   ).size;
@@ -105,9 +105,9 @@ const AdminDashboard = () => {
   return (
     <div className="p-6 space-y-6">
       <NavBarComponent onLogout={handleLogout} /> {/* Pass handleLogout as a prop */}
-      <div className="text-center mb-4">
+      {/* <div className="text-center mb-4">
         <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-      </div>
+      </div> */}
       <div className="flex justify-end space-x-4 mb-4">
         <button
           onClick={handleAddEmployeeClick}
@@ -119,7 +119,7 @@ const AdminDashboard = () => {
       <div className="bg-gray-100 p-4 rounded-lg shadow-md space-y-4">
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-blue-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
+            <div className="bg-indigo-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
               <p className="text-2xl font-bold">
                 {statistics.numberOfCoursesCreated}
               </p>
@@ -129,7 +129,7 @@ const AdminDashboard = () => {
               <p className="text-2xl font-bold">{statistics.numberOfEmployees}</p>
               <p className="text-sm">Employees</p>
             </div>
-            <div className="bg-purple-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
+            <div className="bg-yellow-500 text-white p-4 rounded-lg shadow-md flex flex-col justify-center items-center">
               <p className="text-2xl font-bold">{statistics.numberOfRequests}</p>
               <p className="text-sm">Requests</p>
             </div>

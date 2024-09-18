@@ -120,11 +120,11 @@ const ViewCourse = () => {
     <div className="p-6">
       {/* Back Button */}
       <button
-        onClick={() => navigate(-1)}
-        className="bg-gray-500 text-white px-4 py-2 rounded mb-4 hover:bg-gray-600"
-      >
-        &larr; Back
-      </button>
+          onClick={() => navigate(-1)}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Back
+        </button>
 
       <h1 className="text-2xl font-bold mb-4">{course.coursename}</h1>
       <p className="text-gray-700 mb-2"><strong>Description:</strong> {course.description}</p>
